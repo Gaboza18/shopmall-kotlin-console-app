@@ -7,10 +7,8 @@ class ShoppingHome {
      */
 
     fun start() {
-
         ShowWelcomeMessage() // 인사말 출력
-
-        ShowCategories() // 카테고리 선택창 출력
+        showCategories()
     }
 
     // (1) 인사말 출력
@@ -34,33 +32,10 @@ class ShoppingHome {
         )
     }
 
-    // (2) 카테고리 입력
-    fun ShowCategories() {
-        val categories = arrayOf("패션", "전자기기", "반려동물용품")
+    private  fun showCategories(){
 
-        for (category in categories) {
-            println(category)
-        }
-        println("=> 장바구니로 이동하시려면 '#'을 입력해 주세요.")
+        val shoppingCategory = ShoppingCategory()
+        shoppingCategory.ShowCategories()
 
-        var selectCategory = readLine()
-
-        // 사용자가 올바른 입력할 때까지 반복처리
-
-        while (selectCategory.isNullOrBlank()) { // null 값 또는 "스페이스 공백" 입력시
-            println("값을 입력해 주세요.")
-            selectCategory = readLine() // 재입력 받는다
-        }
-
-        if (selectCategory == "#") {
-
-            // 1. 장바구니로 이동
-
-        } else {
-            // 2. 카테고리 상품 목록 보여주기
-            // 3. 카테고리 목록에 없는 경우 처리
-        }
     }
-
-
 }
