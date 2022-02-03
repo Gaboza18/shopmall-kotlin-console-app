@@ -26,7 +26,9 @@ class ShoppingCategory {
         } else {
             // 입력한 항목이 있으면
             if (categories.contains(selectCategory)) {
-
+                // 카테고리 상품 목록 보여주기
+                val shoppingProductList = ShoppingProductList()
+                shoppingProductList.showProducts(selectCategory)
             } else { // 입력한 항목이 없으면 에러메세지 출력
                 showErrorMessage(selectCategory)
             }
