@@ -3,7 +3,7 @@ package screen
 import extensions.getNotEmptyString
 import LINE_DIVIDER
 
-class ShoppingHome {
+class ShoppingHome : Screen() {
 
     /*
         쇼핑몰 프로그램의 시작 위치
@@ -16,6 +16,9 @@ class ShoppingHome {
 
     // (1) 인사말 출력
     fun ShowWelcomeMessage() {
+
+        // 스택에 저장
+        ScreenStack.push(this)
 
         println("안녕하세요 Shopingmall 에 오신 것을 환영합니다.")
         println("쇼핑을 계속 하시려면 이름을 입력해 주세요:")
@@ -35,7 +38,7 @@ class ShoppingHome {
         )
     }
 
-    private  fun showCategories(){
+    private fun showCategories() {
 
         val shoppingCategory = ShoppingCategory()
         shoppingCategory.ShowCategories()
