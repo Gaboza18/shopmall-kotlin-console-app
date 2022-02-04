@@ -1,6 +1,7 @@
 package screen
 
 import data.CartItems
+import LINE_DIVIDER
 
 /*
     장바구니의 내용을 화면에 출력
@@ -18,7 +19,7 @@ class ShoppingCart {
                 products.keys.joinToString(
                     separator = ", \n",
                     prefix = """
-                            ------------------------------
+                            $LINE_DIVIDER
                             
                             장바구니에 담긴 상품 목록입니다.
                             
