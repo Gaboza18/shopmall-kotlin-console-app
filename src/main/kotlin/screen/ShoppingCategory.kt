@@ -22,6 +22,8 @@ class ShoppingCategory {
         if (selectCategory == "#") {
 
             // 1. 장바구니로 이동
+            val shoppingCart = ShoppingCart()
+            shoppingCart.showCartItems()
 
         } else {
             // 입력한 항목이 있으면
